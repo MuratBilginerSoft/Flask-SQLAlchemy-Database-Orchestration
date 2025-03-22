@@ -17,7 +17,7 @@ Flask-SQLAlchemy-Database-Orchestration is a powerful tool developed for managin
 
 ### Installation
 
-1. Install the package:
+1. Install the package globally:
 ```bash
 # Windows
 pip install Flask-SQLAlchemy-Database-Orchestration
@@ -26,11 +26,60 @@ pip install Flask-SQLAlchemy-Database-Orchestration
 pip3 install Flask-SQLAlchemy-Database-Orchestration
 ```
 
-2. Find the Installation Directory:
+2. Find the installation directory:
 
-When the package is installed, all files will be copied to your current working directory.
+```
+# Windows
+pip show Flask-SQLAlchemy-Database-Orchestration
 
-3. Install Dependencies:
+# Linux/Mac
+pip3 show Flask-SQLAlchemy-Database-Orchestration
+```
+
+The `Location` parameter in the output shows the directory where the package is installed. Copy this directory.
+
+`Location: c:\users\x\appdata\roaming\python\python39\site-packages`
+
+3. Create your own database orchestration application by copying the Flask-SQLAlchemy-Database-Orchestration package.
+
+```bash
+# Windows
+Copy-Item -Path "Location\Flask_SQLAlchemy_Database_Orchestration" -Destination ".\ProjectName" -Recurse
+
+Example:
+
+Copy-Item -Path "c:\users\x\appdata\roaming\python\python39\site-packages\Flask_SQLAlchemy_Database_Orchestration" -Destination ".\ProjectName" -Recurse
+
+# Linux/Mac
+cp -r Location/Flask_SQLAlchemy_Database_Orchestration ./ProjectName
+
+Example:
+
+cp -r /usr/local/lib/python3.9/site-packages/Flask_SQLAlchemy_Database_Orchestration ./ProjectName
+
+```
+
+4. Create a virtual environment:
+
+```bash
+# Windows
+python -m venv .venv
+
+# Linux/Mac
+python3 -m venv .venv
+```
+
+5. Activate the virtual environment:
+
+```bash
+# Windows
+.venv\Scripts\activate
+
+# Linux/Mac
+source .venv/bin/activate
+```
+
+6. Install Dependencies:
 
 ```bash
 # Windows
@@ -198,7 +247,7 @@ Flask-SQLAlchemy-Database-Orchestration, Flask uygulamalarında çoklu veritaban
 
 ### Kurulum
 
-1. Paketi yükleyin:
+1. Paketi global olarak yükleyin:
 ```bash
 # Windows
 pip install Flask-SQLAlchemy-Database-Orchestration
@@ -207,11 +256,60 @@ pip install Flask-SQLAlchemy-Database-Orchestration
 pip3 install Flask-SQLAlchemy-Database-Orchestration
 ```
 
-2. Paketin Kurulu Olduğu Dizini Bulun:
+2. Paketin yüklendiği dizini bulun:
 
-Paket kurulduğunda, tüm dosyalar mevcut çalışma dizininize kopyalanacaktır.
+```
+# Windows
+pip show Flask-SQLAlchemy-Database-Orchestration
 
-3. Bağımlılıkları Yükleyin:
+# Linux/Mac
+pip3 show Flask-SQLAlchemy-Database-Orchestration
+```
+
+Çıktıda `Location` parametresi, paketin yüklendiği dizini gösterir. Bu dizini kopyalayın.
+
+`Location: c:\users\x\appdata\roaming\python\python39\site-packages`
+
+3. Flask-SQLAlchemy-Database-Orchestration paketini kopyalayarak kendi database orchestration uygulamanızı oluşturun.
+
+```bash
+# Windows
+Copy-Item -Path "Location\Flask_SQLAlchemy_Database_Orchestration" -Destination ".\ProjectName" -Recurse
+
+Example:
+
+Copy-Item -Path "c:\users\x\appdata\roaming\python\python39\site-packages\Flask_SQLAlchemy_Database_Orchestration" -Destination ".\ProjectName" -Recurse
+
+# Linux/Mac
+cp -r Location/Flask_SQLAlchemy_Database_Orchestration ./ProjectName
+
+Example:
+
+cp -r /usr/local/lib/python3.9/site-packages/Flask_SQLAlchemy_Database_Orchestration ./ProjectName
+
+```
+
+4. VirtualEnvirüment oluşturun:
+
+```bash
+# Windows
+python -m venv .venv
+
+# Linux/Mac
+python3 -m venv .venv
+```
+
+5. VirtualEnvirüment'ü aktif edin:
+
+```bash
+# Windows
+.venv\Scripts\activate
+
+# Linux/Mac
+source .venv/bin/activate
+```
+
+6. Bağımlılıkları Yükleyin:
 
 ```bash
 # Windows
