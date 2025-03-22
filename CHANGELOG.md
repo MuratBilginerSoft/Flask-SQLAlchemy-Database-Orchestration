@@ -2,6 +2,11 @@
 
 Bu dosya, Flask-SQLAlchemy-Database-Orchestration projesindeki tüm önemli değişiklikleri belgelemektedir.
 
+## [1.0.4] - 2025-03-22
+
+### Düzeltmeler
+- CreateMigrationMaker.py dosyası path sorunu düzeltildi
+
 ## [1.0.0] - 2025-03-21
 
 ### Eklenenler

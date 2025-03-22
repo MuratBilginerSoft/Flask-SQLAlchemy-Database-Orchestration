@@ -179,3 +179,6 @@ Assets/
 TestEntity/
 flask_sqlalchemy_db_orchestration/
 Flask_SQLAlchemy_Database_Orchestration/
+setup.py
+MANIFEST.in
+PreparePackage.py
