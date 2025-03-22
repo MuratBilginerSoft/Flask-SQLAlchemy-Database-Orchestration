@@ -1,6 +1,7 @@
 # region Import Packages
 
 import os
+import json
 
 # endregion
 
@@ -26,15 +27,16 @@ class CreateMigrationMaker:
                 dbPath = os.path.join(os.getcwd(), "Assets", "Databases", config.get('DATABASE_NAME', 'FlaskLocal.db'))
                 configSQLite = dict(config)
                 configSQLite["DATABASE_NAME"] = dbPath
-                configStr = str(configSQLite)
+                configStr = json.dumps(configSQLite)
             else:
-                configStr = str(config)
+                configStr = json.dumps(config)
                 
             f.write(f"""from flask import Flask
 import sys
 import os
+import json
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
 from Logix.DbManager.DbManager import db, migrate, initApp
 from Models.Entity._EntityExport import * 
